@@ -1,0 +1,880 @@
+@media screen and (min-width:801px) {
+        /* ここにパソコン版だけの記述 */
+  /* 左のサイドメニューの設定 */
+  .menu{
+    position: fixed;
+    width:20%;
+    height:100%;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index:9000;
+  }
+
+  .menu ul{
+    list-style:none;
+  }
+  .menu ul li{
+    margin:30px 0;
+    width:450px;
+    height:70px;
+  }
+  .prof_bar{
+    position:fixed;
+    width:20%;
+    height:100%;
+    top:70px;
+    right:0;
+    background-color:#ffec50;
+ }
+} /*ここまで*/
+
+/*タイムラインの文字固定*/
+#top-line{
+ position:fixed;
+ top:0;
+ left: 0;
+ height:50px;
+ width:100%;
+ padding:20px;
+ background-color:white;
+ text-align:center;
+ z-index:9999;
+ font-size:30px;
+ padding-bottom:0px;
+ margin-top:0;
+
+}
+/* リンクの設定 */
+#clear_sample {
+  text-decoration: none; /* リンクの下線を出さない */
+ }
+ #clear_sample:link {
+  color: #4d4d4d; /* 色の指定をリセット */
+ }
+ #clear_sample:visited {
+  color: #4d4d4d; /* 色の指定をリセット */
+ }
+  #clear_sample:hover {
+  color: #808080; /* 色の指定をリセット */
+ }
+#my_post {
+  color: #f44330; /* 自分の投稿だけ色変更 */
+}
+
+
+
+/* このシステムの基本的なデザインの指定がされている */
+  html {
+    height: 100%;
+      scroll-behavior:smooth;
+      background-color:white ;
+  }
+
+  body {
+    background-color:#FBFBFB;
+    color: black;
+    font-family:Comic MS;
+    width: auto;
+    height: 100%;
+    margin-left: 20%;
+    margin-right:20%;
+  }
+
+  label{
+    border-color: red;
+    outline: none; /* ブラウザが標準で付加する線を消す */
+  }
+
+  a{
+  text-decoration:none;
+  }
+  a:hover{
+  color:#808080;
+  }
+  
+     button{
+    padding: 5px 20px;
+    background-color: #ffec50;
+    color: black;
+    border-style: none;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  button:hover{
+  background-color:#808080;
+  color:#4d4d4d;
+  }
+
+  .retweet{
+    background-color: transparent;
+    color: #808080;
+  }
+
+  .retweet:hover{
+    background-color: transparent;
+  }
+/* ここまで */
+
+/* ヘッダー関係の処理 */
+
+#timeline-head{
+  display: block;
+  /*margin-left: 150px;*/
+  width:100%;
+  height: 60px;
+  top:0;
+  background: #517ecb;
+  color: #fffffe;
+  border-bottom: none;
+  position: fixed;
+  text-align: center;
+  text-decoration: none;
+  padding-left:0;
+  padding-right:auto;
+}
+
+
+
+/*スマホ版の処理*/
+@media screen and (max-width:800px) {
+  .page_name{
+    display: none;
+  }
+
+  .search_form{
+    float: right;
+    width: 50%;
+    padding: 0px 30px 0px 0px;
+  }
+
+  .search_border{
+    border: 1px solid;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    float: right;
+  }
+
+  .search_field{
+    width: 70%;
+    border: none;
+    padding: 6px 0 8px 10px;
+    outline: none;
+    background-color: transparent;
+    font-size: 15px;
+    vertical-align: text-top;
+  }
+}
+
+
+
+/* PC版 */
+@media screen and (min-width:801px) {
+
+  .search_form{
+    float: right;
+    padding: 0px 30px 0px 0px;
+  }
+/*ヘッダーの検索バーの処理*/
+  .search_border{
+    border: 1px solid;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    float: right;
+  }
+
+  .search_field{
+    width: 75%;
+    border: none;
+    padding: 6px 0 8px 10px;
+    outline: none;
+    background-color: transparent;
+    font-size: 15px;
+    vertical-align: text-top;
+  }
+}
+
+/*超縮小された場合の処理*/
+@media screen and (max-width:345px) {
+  .search_form{
+    display: none;
+  }
+}
+
+.search_submit{
+  height: 5px;
+  color: black;
+  cursor: pointer;
+  font-size: 15px;
+  background-color: transparent;
+  padding: 6px 10px 27px 10px;
+  border-left: none;
+  vertical-align: text-top;
+}
+/* ヘッダー関係の処理 ここまで */
+
+/* ログイン関係(新規登録・パスワード変更)のデザイン指定 */
+/* 画面全体のデザイン指定 */
+.login_div{
+  text-align: center; /* 要素を真ん中に */
+  display: flex;
+  margin-top: 24px;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 〇〇画面とかh1で表示するとこ */
+.login_div_title{
+  font-size: 15px;
+  color: #393f40;
+}
+@media screen and (min-width:800px) {
+  /* ここにPC版だけの記述 */
+  /* テキストエリアの指定 */
+  .login_div_input{
+    padding: 12px 16px; /*テキストエリア内の上下左右の余白*/
+    width: 464px;
+    border: 1px solid #e1e7ee; /* テキストエリアの枠線の色 */
+    box-sizing: border-box;
+    border-radius: 6px; /* 角を丸く */
+    margin-bottom: 16px; /* <br>の代わりに下に余白を追加 */
+    font-size: 16px;
+    color: #393f40;
+  }
+}
+@media screen and (max-width:800px) {
+  /* ここにスマホ版だけの記述 */
+  /* テキストエリアの指定 */
+  .login_div_input{
+    padding: 12px 16px; /*テキストエリア内の上下左右の余白*/
+    width: 328px;
+    border: 1px solid #e1e7ee; /* テキストエリアの枠線の色 */
+    box-sizing: border-box;
+    border-radius: 6px; /* 角を丸く */
+    margin-bottom: 16px; /* <br>の代わりに下に余白を追加 */
+    font-size: 16px;
+    color: #393f40;
+  }
+}
+/* pタグ設定 */
+.login_div_p{
+  margin-bottom: 10px;
+  line-height: 0; /* 行間の余白設定 */
+}
+
+/* ラベル設定 */
+.login_div_label{
+  display: flex;
+  padding: 0;
+  margin-top: 24px; /* <br>の代わりに上の余白を追加*/
+}
+
+/* ログインボタンを囲うdiv */
+.login_div_btn_area{
+  padding: 0;
+  margin-top: 24px; /* <br>の代わりに上に余白を追加*/
+}
+
+/* ログイン関係のボタンの指定 */
+.login_div_btn{
+  padding: 12px 32px; /*上下左右の余白でボタンを大きく*/
+  background: #ffe050;
+  border-radius: 100px; /* 角を丸く */
+  font-weight: 600; /* 文字の太さ */
+  font-size: 14px;
+  color: #393f40;
+  border: none;
+}
+/* ここまで */
+
+@media screen and (min-width:800px) {
+  /* ここにPC版だけの記述 */
+  /* 返信全体のデザイン */
+  .ret_post{
+  width:auto;
+  margin-left:20%;
+  margin-right:10%;
+  border:solid 1px black;
+  border-radius: 10px;
+  }
+
+  /* フォローフォロワー一覧の全体の設定 */
+.follow_border{
+  margin-left: 25%;
+  width: 50%;
+  border: solid 2px black;
+}
+}
+@media screen and (max-width:800px) {
+  /* ここにスマホ版だけの記述 */
+  .ret_post{
+    width:auto;
+    margin-left:20%;
+    margin-right:2%;
+    border:solid 1px black;
+    border-radius: 10px;
+    }
+
+    /* フォローフォロワー一覧の全体の設定 */
+  .follow_border{
+    margin-left: 5%;
+    width: 90%;
+    border: solid 2px black;
+  }
+}
+
+
+/* 投稿全体のデザイン */
+.ret_post_main{
+margin-left:10%;
+margin-right:10%;
+padding-right:10px;
+padding-left:10px;
+padding-top:10px;
+width:auto;
+border:solid 2px black;
+border-radius: 10px;
+}
+.prof_border{
+margin-left: 15%;
+margin-right:15%;
+width:auto;
+border:solid 2px transparent;
+text-align: center;
+}
+
+
+/* プロフィールにあるアイコンの表示設定 */
+.prof_icon{
+  border-radius: 75px;
+  width: 125px;
+  height: 125px;
+}
+/* プロフィールのフォローフォロワー欄*/
+.prof_ff{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+@media screen and (max-width:800px) {
+          /* ここにスマホ版だけの記述 */
+  body {
+    background-color:#FBFBFB;
+    color: black;
+    font-family:Comic MS;
+    width: auto;
+    height: 100%;
+    margin-left: 5%;
+    margin-right:5%;
+  }
+  .ret_post_main{
+    padding-right:10px;
+    padding-left:10px;
+    padding-top:10px;
+    margin-left:10px;
+    margin-right:10px;
+    width:auto;
+    height:auto;
+    font-size:15px;
+    border:solid 2px black;
+  }
+  .prof_border{
+    padding:auto;
+    width:auto;
+    font-size:12px;
+    border:solid 2px transparent;
+  }
+}
+.fa-eye-slash{ /*アイコンに一定のスペースを設ける*/
+  height: 20px;
+  width: 20px;
+  padding: 5px 5px;
+}
+/*アニメーション*/
+#username:focus + .input_str{
+  color: #3be5ae;
+  font-size: 10px;
+  line-height: 10px;
+  width: 85px;
+  height: 10px;
+  padding: 0 2px;
+  background-color: white;
+  transform:translate3d(5px, -6px, 0);
+}
+/*入力欄のデザイン↑ ここまで*/
+
+
+.btn-good{/*いいねボタン*/
+    display: inline-block;
+    padding: 0 8px;
+    cursor: pointer;
+}
+.btn-good:hover{
+    color: #f44336;
+}
+.active{
+    color: #f44336;
+}
+.btn-good .active{
+    color: #f44336;
+}
+
+.btn-retweet{/*いいねボタン*/
+  display: inline-block;
+  padding: 0 8px;
+  cursor: pointer;
+}
+.btn-retweet:hover{
+  color: #3be5ae;
+}
+.act{
+  color: #3be5ae;
+}
+.btn-retweet .active{
+  color: #3be5ae;
+}
+/* ↑ボタンの設定 */
+
+#page_top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 30px;
+  text-align:center;
+  line-height: 1.2rem;
+  background: #fff;
+  color: #737373;
+  padding: 10px;
+  border: solid 1px;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px -6px rgba(0,0,0,.5), 0 3px 10px -4px rgba(0,0,0,.2);
+  width: 70px;
+  height: 70px;
+  opacity: 0.6;
+}
+
+#page_top a{
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+}
+/*入力モーダル(投稿機能)の設定*/
+  /*モーダル本体の指定 +
+  投稿エリアの背景の指定*/
+  .modal-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,50%);
+    padding: 40px 20px;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    box-sizing: border-box;
+    z-index:9999;
+  }
+  /*投稿ボタンやファイルを選択ボタンとかの指定*/
+  .modal-container:before{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }
+  /*モーダル本体に「active」クラス付与した時のスタイル*/
+  .modal-container.active{
+    opacity: 1;
+    visibility: visible;
+  }
+  @media screen and (min-width:801px) {
+        /* ここにパソコン版だけの記述 */
+    /*モーダル枠の指定*/
+  .modal-body{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 500px;
+    width: 90%;
+  }
+    /* ×ボタンの指定 */
+  .modal-close{
+    position: fixed;
+    top: 100px;
+    right: 175px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+  }
+  /*モーダル内のテキストエリアや投稿ボタンを囲む白い背景の指定 */
+  .modal-content{
+    background: #fff;
+    position: fixed;
+    resize: none;
+    white-space:pre-wrap;
+    top: 100px;
+    left: 25%;
+    width:50%;
+    height:219px;
+    margin: auto;
+  }
+/* ファイルを選択や投稿ボタンを横並びにする */
+  .modal-div{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    resize: none;
+    white-space:pre-wrap;
+    top: 269px;
+    left: 25%;
+    width: 50%;
+  }
+  /* 投稿ボタン */
+  .modal-insert{
+    width:35%;
+    height:50px;
+    font-weight:bold;
+    font-size:17px;
+    padding:0;
+  }
+  /*投稿のテキストエリアの指定*/
+  .insert_post{
+    position: fixed;
+    resize: none;
+    white-space:pre-wrap;
+    top: 100px;
+    left: 25%;
+    margin:0 auto;
+    width:50%;
+    height:170px;
+    font-size:20px;
+    }
+  }
+      @media screen and (max-width:800px) {
+          /* ここにスマホ版だけの記述 */
+      /*モーダル枠の指定*/
+    .modal-body{
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      width: 100%;
+    }
+      /* ×ボタンの指定 */
+    .modal-close{
+      position: fixed;
+      top: 100px;
+      right: 175px;
+      font-size: 40px;
+      color: #fff;
+      cursor: pointer;
+    }
+    /*モーダル内のテキストエリアや投稿ボタンを囲む白い背景の指定 */
+    .modal-content{
+      background: #fff;
+      position: fixed;
+      resize: none;
+      white-space:pre-wrap;
+      top: 100px;
+      left:10px;
+      right:10px;
+      width:95%;
+      height:219px;
+      margin: auto;
+    }
+    /* ファイルを選択や投稿ボタンを横並びにする */
+    .modal-div{
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      resize: none;
+      white-space:pre-wrap;
+      top: 269px;
+      left: 5%;
+      width: 90%;
+    }
+    /* 投稿ボタン */
+    .modal-insert{
+      width:35%;
+      height:50px;
+      font-weight:bold;
+      font-size:17px;
+      padding:0;
+    }
+    /*投稿のテキストエリアの指定*/
+    .insert_post{
+      position: fixed;
+      resize: none;
+      white-space:pre-wrap;
+      top: 100px;
+      left: 10px;
+      margin:0 auto;
+      width:95%;
+      height:170px;
+      font-size:20px;
+    }
+  }
+/* 投稿のポップアップここまで */
+
+/*投稿欄の指定*/
+.dt{
+  font-size:12px;
+  float:right;
+  color:#4d4d4d;
+}
+.name{
+  font-size:22px;
+}
+
+.log-id{
+  font-size:12px;
+}
+.trash{/*削除*/
+ font-size:16px;
+ float:right;
+ padding:5px 10px;
+ }
+ 
+/*強制改行*/
+.post_tex{
+overflow-wrap:break-word;
+word-wrap:break-word;
+}
+
+/*好きなところで改行*/
+.kaigyo{
+white-space:pre-wrap;
+}
+
+.mini-font{
+ font-size:10px;
+}
+
+@media screen and (min-width:801px) {
+        /* ここにパソコン版だけの記述 */
+/*サイドバーのボタン指定*/
+#timeline{
+ position:fixed;
+ top:70px;
+ left:0;
+ width:150px;
+ height:50px;
+ font-weight:bold;
+ font-size:17px;
+ padding:0;
+ }
+ #logout{
+ position:fixed;
+ left:0;
+ bottom:50px;
+ margin-top:270px;
+ width:150px;
+ height:50px;
+ font-weight:bold;
+ font-size:17px;
+ padding:0;
+ }
+ .modal-open{
+ position:fixed;
+ left:40px;
+ bottom:200px;
+ border-radius:100%;
+ margin:0;
+ height:70px;
+ width:70px;
+ font-size:17px;
+ padding:0;
+ font-weight:bold;
+ }
+ #mypage{
+ position:fixed;
+ left:0;
+ top:120px;
+ margin:0px;
+ height:50px;
+ width:150px;
+ font-weight:bold;
+ font-size:17px;
+ padding:0;
+}
+#followtl{
+ position:fixed;
+ left:0;
+ top:170px;
+  margin:0px;
+  height:50px;
+  width:150px;
+  font-weight:bold;
+  font-size:17px;
+  padding:0;
+}
+#notice{
+  position:fixed;
+  left:0;
+  top:220px;
+   margin:0px;
+   height:50px;
+   width:150px;
+   font-weight:bold;
+   font-size:17px;
+   padding:0;
+ }
+}
+@media screen and (max-width:800px) {
+        /* ここにスマホ版だけの記述 */
+/*サイドバーのボタン指定*/
+#timeline{
+  position:fixed;
+  top:70px;
+  left:0;
+  width:20%;
+  height:50px;
+  font-weight:bold;
+  font-size:17px;
+  padding:0;
+  margin:0;
+  z-index:9999;
+  }
+
+ .modal-open{
+  position:fixed;
+  bottom:20px;
+  left:20px;
+  height:70px;
+  border-radius:100%;
+  width:70px;
+  font-size:17px;
+  font-weight:bold;
+  padding:0;
+  margin:0;
+  z-index:9999;
+  }
+  #mypage{
+  position:fixed;
+  top:70px;
+  left:40%;
+  height:50px;
+  width:20%;
+  font-weight:bold;
+  font-size:17px;
+  padding:0;
+  margin:0;
+  z-index:9999;
+ }
+  #followtl{
+  position:fixed;
+   top:70px;
+   left:60%;
+   height:50px;
+   width:20%;
+   font-weight:bold;
+   font-size:17px;
+   padding:0;
+   margin:0;
+   z-index:9999;
+ }
+   #logout{
+  position:fixed;
+  width:20%;
+  top:70px;
+  right:0;
+  height:50px;
+  font-weight:bold;
+  font-size:17px;
+  padding:0;
+  margin:0;
+  z-index:9999;
+  }
+  #notice{
+  position:fixed;
+  top:70px;
+  left:20%;
+  height:50px;
+  width:20%;
+  font-size:17px;
+  font-weight:bold;
+  padding:0;
+  margin:0;
+  z-index:9999;
+ }
+}
+
+.ret_post{
+  background-color: #ffffff;
+}
+/*マイページのプロフィールアイコン設定*/
+.prof_icon
+/*マイページ変更欄*/
+.wrap{
+ margin: 2em 0;
+  padding: 0;
+}
+.wrap label {
+  display: block;
+  padding : 8px;
+  color: #fff;
+  font-weight: bold;
+  background: #999;
+  cursor: pointer;
+}
+
+.wrap input[type="checkbox"] {
+  display: none;
+}
+
+.wrap .mypage_content {
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+.switch:checked + .mypage_content {
+  height: auto;
+  padding: 8px;
+  background: #f7f7f7;
+}
+
+@media screen and (min-width:801px) {
+  /* ここにパソコン版だけの記述 */
+/*右のサイドバー*/
+.prof_bar_r{
+  display: block;
+  padding-right:5px;
+  padding-left:5px;
+  padding-top:5px;
+  margin-left:5px;
+  margin-right:5px;
+  margin-top:40%;
+  width:auto;
+  height:auto;
+  font-size:15px;
+  text-align:center;
+  border:solid 2px #808080;
+  border-radius:10px;
+  background-color:#fbfbfb;
+ }
+}
+
+@media screen and (max-width:800px) {
+  /* ここにスマホ版だけの記述 */
+.prof_bar_r{
+  display: none;
+}
+
+}
+
+
+#my_post{
+border-radius:100%;
+}
